@@ -2,7 +2,7 @@
 
 create table "logs";
 
--- insert into contatos (nome, email, telefone) values
+-- insert into contatos(nome, email, telefone) values
 --     ('Nicollas', 'nicollas@gmail.com', '99999-8899'),
 --     ('Jonh', 'john@icloud.com','88888-7777'),
 --     ('Does', 'does@icloud.com','66666-9999'),

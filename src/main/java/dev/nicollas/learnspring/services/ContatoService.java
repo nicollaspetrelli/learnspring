@@ -32,4 +32,8 @@ public class ContatoService {
     public void remover(Integer id) {
         repository.deleteById(id);
     }
+
+    public Contato atualizar(Contato contato) {
+        return repository.save(contato);
+    }
 }

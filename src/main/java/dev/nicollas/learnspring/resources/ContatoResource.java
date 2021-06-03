@@ -45,4 +45,10 @@ public class ContatoResource {
         service.remover(id);
         return ResponseEntity.ok().build();
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> atualizar(@RequestBody Contato contato, @PathVariable Integer id) {
+        Contato atualizado = service.atualizar(contato);
+        return ResponseEntity.noContent().build();
+    }
 }

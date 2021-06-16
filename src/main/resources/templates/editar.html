@@ -8,29 +8,27 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>Learning Spring!</title>
+    <title>Edit - Learning Spring!</title>
 </head>
 <body>
 <div class="container">
-    <form action="#" th:action="@{/add}" th:object="${contato}" method="post">
+    <form th:action="@{/update/{id}(id=${contato.id})}" th:object="${contato}" method="post">
         <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" th:field="*{nome}" id="name" placeholder="Nome" class="form-control">
-            <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+            <label for="name">Name</label>
+            <input type="text" id="name" th:field="*{nome}" placeholder="Name" class="form-control">
+            <span class="text-danger" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
         </div>
-
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" th:field="*{email}" id="email" placeholder="Email" class="form-control">
-            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+            <input type="text" id="email" th:field="*{email}" placeholder="Email" class="form-control">
+            <span class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
         </div>
-
         <div class="form-group">
             <label for="telefone">Telefone</label>
-            <input type="text" th:field="*{telefone}" id="telefone" placeholder="Telefone" class="form-control">
-            <span th:if="${#fields.hasErrors('telefone')}" th:erros="*{telefone}"></span>
+            <input type="text" id="telefone" th:field="*{telefone}" placeholder="Telefone" class="form-control">
+            <span class="text-danger" th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></span>
         </div>
-        <input type="submit" class="btn btn-primary" value="Salvar">
+        <input type="submit" class="btn btn-primary" value="Adicionar">
     </form>
 </div>
 

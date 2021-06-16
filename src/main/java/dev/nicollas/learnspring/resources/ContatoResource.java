@@ -31,7 +31,7 @@ public class ContatoResource {
 
     @PostMapping
     public ResponseEntity<Void> inserir (@RequestBody Contato contato) {
-        Contato contatoSaved = service.inserir(contato);
+        Contato contatoSaved = service.salver(contato);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                     .path("/{id}")

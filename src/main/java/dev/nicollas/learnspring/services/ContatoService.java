@@ -23,7 +23,7 @@ public class ContatoService {
         return contatoOptional.orElse(new Contato());
     }
 
-    public Contato inserir(Contato contato) {
+    public Contato salver(Contato contato) {
         Contato contatoSaved = repository.save(contato);
         contato.setId(contatoSaved.getId());
         return contato;
